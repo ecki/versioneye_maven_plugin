@@ -3,7 +3,7 @@ language: java
 install: mvn -q clean
 
 # clean / compile - test - package - verify - install - deploy / site
-script: mvn -Dmaven.compiler.source=6 -Dmaven.compiler.source=6 verify
+script: mvn -Dmaven.compiler.source=6 -Dmaven.compiler.target=6 verify
 
 jdk:
   - oraclejdk7
