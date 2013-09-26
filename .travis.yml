@@ -7,7 +7,7 @@ script: mvn -Dmaven.compiler.source=6 -Dmaven.compiler.source=6 verify
 
 jdk:
   - oraclejdk7
-  - openjdk8
+#  - openjdk8
 
 #branches:
 # only:
