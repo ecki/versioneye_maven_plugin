@@ -3,10 +3,13 @@ language: java
 install: mvn -q clean
 
 # clean / compile - test - package - verify - install - deploy / site
-script: mvn verify
+script: mvn -X verify
 
 jdk:
   - oraclejdk7
+  - openjdk7
+  - openjd8
+  - oraclejdk6
 
 #branches:
 # only:
