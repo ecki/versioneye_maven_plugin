@@ -3,11 +3,13 @@ language: java
 install: mvn -q clean
 
 # clean / compile - test - package - verify - install - deploy / site
-script: mvn -Dmaven.compiler.source=6 -Dmaven.compiler.target=6 verify
 
-jdk:
-  - oraclejdk7
-#  - openjdk8
+matrix:
+  include:
+    - jdk: oraclejdk6
+      script: mvn -X -Dmaven.compiler.source=6 -Dmaven.compiler.target=6 verify
+    - jdk: openjdk7
+      script: mvn -X -Dmaven.compiler.source=7 -Dmaven.compiler.target=7 verify
 
 #branches:
 # only:
