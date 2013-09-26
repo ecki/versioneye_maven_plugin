@@ -3,20 +3,16 @@ language: java
 install: mvn -B -q clean
 
 jdk:
-  - oraclejdk6
-  - openjdk7
+  - oraclejdk7
 
 env:
   matrix:
-    - VER=6
     - VER=7
 
 matrix:
   include:
-    - jdk: oraclejdk6
+    - jdk: openjdk6
       env: VER=6
-    - jdk: openjdk7
-      env: VER=7
 
 
 # clean / compile - test - package - verify - install - deploy / site
